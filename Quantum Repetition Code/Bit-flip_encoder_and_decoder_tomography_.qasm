@@ -1,0 +1,40 @@
+// Name of Experiment: Bit-flip encoder and decoder (tomography) v6
+
+OPENQASM 2.0;
+include "qelib1.inc";
+
+h q[2];
+h q[1];
+h q[2];
+h q[3];
+cx q[1], q[2];
+cx q[3], q[2];
+h q[1];
+h q[2];
+h q[3];
+id q[1];
+id q[2];
+id q[3];
+id q[1];
+id q[2];
+id q[3];
+id q[1];
+id q[2];
+id q[3];
+h q[1];
+h q[2];
+h q[3];
+cx q[3], q[2];
+cx q[1], q[2];
+h q[1];
+h q[3];
+cx q[3], q[2];
+tdg q[2];
+cx q[1], q[2];
+t q[2];
+cx q[3], q[2];
+tdg q[2];
+cx q[1], q[2];
+t q[2];
+h q[2];
+bloch q[2];
